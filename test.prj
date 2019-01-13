@@ -1,0 +1,65 @@
+{
+    "name": "test_Project",
+    "path": "D:\\Truman\\Temp\\test_project\\North",
+	"begin_time": "2016-06-29 18:30:00",
+    "end_time": "2016-07-18 08:00:00",
+    "freq": "15T",
+    "sonic_config": {
+        "name": "sonic",
+        "data_format": {
+            "header": 0,
+            "skiprows": [
+                0,
+                2,
+                3
+            ],
+            "usecols": [
+                0,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13
+            ],
+            "na_values": "NAN",
+            "parse_dates": [
+                0
+            ]
+        },
+        "file_pattern": {
+            "file_init": "TOA5_8329.ts",
+            "file_ext": ".dat"
+        },
+		"cores": 0
+    },
+    "ammonia_config": {
+        "name": "ammonia",
+        "data_format": {
+            "sep": "\\s+",
+            "usecols": [
+                0,
+                1,
+                17,
+                21
+            ],
+            "parse_dates": [
+                [
+                    0,
+                    1
+                ]
+            ]
+        },
+        "file_pattern": {
+            "file_init": "AEDS2044",
+            "file_ext": ".dat"
+        }
+    },
+	"cores": 0
+}
