@@ -1,4 +1,14 @@
 # coding=utf-8
+"""
+---
+v1.0.0 Initial package
+
+Data processing classes and functions te be used in preparing raw data for further analysis, supported data formats are:
+
+1. Campbell Scientific sonic anemometers raw files
+2. Picarro G2103 ammonia analyzer raw files
+
+"""
 import json
 import os
 from dataclasses import dataclass
@@ -104,7 +114,7 @@ class SonicData(RawData):
                 file_path = split_path + '\\' + part_name + '.csv'
                 data_part.to_csv(file_path, index=False)
             except Exception as e:
-                print(e)
+                print("%s : %s" % (str(e), start_time))
             i += 1
         return True
 

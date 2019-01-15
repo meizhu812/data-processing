@@ -8,5 +8,6 @@ setup(
     license='GPL-3.0',
     author='Truman',
     author_email='meizhu812@outlook.com',
-    description=''
+    description='',
+    install_requires=['pandas', 'numpy', 'matplotlib']
 )
